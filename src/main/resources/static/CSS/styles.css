@@ -1,5 +1,10 @@
 :root{
 }
+
 body{
     background-color: rgba(0, 238, 255, 0.616);
+}
+
+.hashtag {
+    text-decoration: none;
 }
