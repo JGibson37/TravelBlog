@@ -32,4 +32,5 @@ public class CountryController {
         model.addAttribute("country",countries.get(countryName));
         return "country-template";
     }
+
 }
