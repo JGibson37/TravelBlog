@@ -2,11 +2,11 @@ package org.wecancodeit.reviews;
 
 public class City {
 
-    String cityName;
-    String starRating;
-    String pointOfInterest1;
-    String pointOfInterest2;
-    String review;
+    private String cityName;
+    private String starRating;
+    private String pointOfInterest1;
+    private String pointOfInterest2;
+    private String review;
 
     public City(String cityName, String starRating, String pointOfInterest1, String pointOfInterest2, String review) {
         this.cityName = cityName;
