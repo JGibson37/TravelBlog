@@ -1,4 +1,4 @@
-<!--Ben's Book-template example-->
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
@@ -6,36 +6,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bruce Peninsula</title>
-    <link rel="stylesheet" href="../static/CSS/review-layout.css" />
-    <link rel="stylesheet" href="../static/CSS/parent-layout.css" />
-    <link rel="stylesheet" href="../static/CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/review-layout.css" />
+    <link rel="stylesheet" href="./CSS/parent-layout.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <h1 class="header__title">Travel Review Cities</h1>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-list-item">
-                    <a href="cities-template.html" class="header__nav-link">Home</a>
-                </li>
-                <li class="header__nav-list-item">
-                    <a href="" class="header__nav-link">#HashTags</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="City">
-            <h2 th:text="${city.cityName}" class="city__name">Head First Java</h2>
-<!--            <h3 th:text="${book.author}" class="book__author">Kathy Sierra</h3>-->
-<!--            <p th:text="${book.isbn}" class="book__isbn">ISBN: 978-0-596-00920-5</p>-->
-<!--            <p th:text="${book.description}" class="book__description">-->
-<!--                Head First Java is a complete learning experience in Java and object-->
-<!--                oriented programming.-->
-<!--            </p>-->
-        </section>
-    </main>
-</div>
+<nav>
+    <div><a href="./category.html">Home</a></div>
+    <div><a href="./canada.html">Canada</a></div>
+</nav>
+<h1 th:text="${city.cityName}">Bruce Peninsula Review</h1>
+<p th:text="${city.starRating}"> Star Rating: 5 / 5</p>
+<div><a class="hashtag" href="./park.html"> #Park</a> <a class="hashtag" href="./active.html"> #Active</a></div>
+<p>Points of Interest:</p>
+<ul>
+    <li th:text="${city.pointOfInterest1}">Bruce Peninsula National Park</li>
+    <li th:text="${city.pointOfInterest2}">The Fish And Chip Place</li>
+</ul>
+<p th:text="${city.review}">
+    The Bruce Peninsula is an astounding area to visit if you enjoy hiking and
+    nature. The winding pine forest trails and towering cliffs into crystal
+    clear water demand you explore them. After exerting yourself in your
+    travels, The Fish And Chip Place serves amazing white-fish tacos (And I
+    don't even like fish!)
+</p>
+<img th:src="${city.photo}" alt="Bruce Peninsula Img"/>
 </body>
+<footer>
+    <div> &copy; CodingOnTheFly 2020</div>
+</footer>
 </html>

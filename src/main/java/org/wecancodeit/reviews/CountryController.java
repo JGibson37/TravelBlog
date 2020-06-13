@@ -19,7 +19,7 @@ public class CountryController {
                 "      nature. The winding pine forest trails and towering cliffs into crystal\n" +
                 "      clear water demand you explore them. After exerting yourself in your\n" +
                 "      travels, The Fish And Chip Place serves amazing white-fish tacos (And I\n" +
-                "      don't even like fish!");
+                "      don't even like fish!", "https://raw.githubusercontent.com/2020-Summer-Cohort/reviews-site-codingonthefly/dev/src/main/resources/static/images/brucepeninsulacliffs.jpg");
 
         ArrayList<City> cities = new ArrayList<>();
         cities.add(brucePeninsula);

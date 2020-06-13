@@ -7,13 +7,17 @@ public class City {
     private String pointOfInterest1;
     private String pointOfInterest2;
     private String review;
+    private String photo;
 
-    public City(String cityName, String starRating, String pointOfInterest1, String pointOfInterest2, String review) {
+
+
+    public City(String cityName, String starRating, String pointOfInterest1, String pointOfInterest2, String review, String photo) {
         this.cityName = cityName;
         this.starRating = starRating;
         this.pointOfInterest1 = pointOfInterest1;
         this.pointOfInterest2 = pointOfInterest2;
         this.review = review;
+        this.photo = photo;
     }
 
     public String getCityName() {
@@ -30,6 +34,9 @@ public class City {
     }
     public String getReview() {
         return review;
+    }
+    public String getPhoto() {
+        return photo;
     }
 
 }
