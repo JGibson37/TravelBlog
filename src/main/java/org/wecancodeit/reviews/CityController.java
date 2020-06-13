@@ -15,9 +15,7 @@ public class CityController {
     public CityController(CityStorage cityStorage) {
         this.cityStorage = cityStorage;
 
-
         }
-
 
         @RequestMapping("cities/{cityName}")
         public String showSingleCity ( @PathVariable String cityName, Model model){
