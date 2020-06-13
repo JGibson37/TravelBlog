@@ -30,7 +30,7 @@ public class CountryController {
     @RequestMapping("countries/{countryName}")
     public String showSingleCountry(@PathVariable String countryName, Model model){
         model.addAttribute("country",countries.get(countryName));
-        return "country-template";
+        return "countries-template";
     }
 
 }
