@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-
 @Controller
 public class CityController {
 
@@ -15,12 +14,12 @@ public class CityController {
     public CityController(CityStorage cityStorage) {
         this.cityStorage = cityStorage;
 
-        }
-
-        @RequestMapping("cities/{cityName}")
-        public String showSingleCity ( @PathVariable String cityName, Model model){
-            model.addAttribute("city", cityStorage.findCityByName(cityName));
-            return "cities-template";
-        }
-
     }
+
+    @RequestMapping("cities/{cityName}")
+    public String showSingleCity(@PathVariable String cityName, Model model) {
+        model.addAttribute("city", cityStorage.findCityByName(cityName));
+        return "cities-template";
+    }
+
+}

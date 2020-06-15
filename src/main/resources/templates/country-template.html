@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahamas</title>
+    <link rel="stylesheet" href="./CSS/countries-layout.css" />
+    <link rel="stylesheet" href="./CSS/parent-layout.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
 </head>
 <body>
-
+<h1 th:text="${country.countryName}"> Bahamas</h1>
+<nav>
+    <div><a href="./category.html">Home</a></div>
+    <div><a href="./bahamas.html">Bahamas</a></div>
+    <div><a href="./canada.html">Canada</a></div>
+    <div><a href="./italy.html">Italy</a></div>
+    <div><a href="./south-korea.html">South Korea</a></div>
+    <div><a href="./united-states.html">United States</a></div>
+</nav>
+<h2> Cities To Visit </h2>
+<nav>
+    <ul >
+        <li class="review_list_link" th:each="review:${country.c()}">
+            <a class="review-list-links__link" th:href="@{'/review/'+ ${review.id}}"
+               th:text="${review.reviewName}"></a>
+        </li>
+    </ul>
+<!--    <div ><a th:text="${country.city1}" href="/cities/Nassau">Nassau</a></div>-->
+<!--    <div ><a th:text="${country.city2}" href="/cities/Lucaya">Lucaya</a></div>-->
+</nav>
 </body>
+<footer>
+    <div> &copy; CodingOnTheFly 2020</div>
+</footer>
 </html>
