@@ -12,12 +12,18 @@ public class CountryStorage {
 
     ArrayList<Country> countries = new ArrayList<>();
 
+    public ArrayList<Country> getCountries() {
+        return countries;
+    }
+
     public CountryStorage(){
-        countries.add( new Country("Bahamas"));
-        countries.add(new Country("Canada"));
-        countries.add(new Country("Italy"));
-        countries.add(new Country("South Korea"));
-        countries.add(new Country("United States"));
+        Country country1 = new Country("Bahamas");
+        Country country2 = new Country("Canada");
+        Country country3 = new Country("Italy");
+        Country country4 = new Country("South Korea");
+        Country country5 = new Country("United States");
+
+
 
 
     }

@@ -76,8 +76,8 @@ public class CityStorage {
 
 
     }
-//    public City findCityByName(String cityName){
-//        return cities.get(cityName);
+    public City findCityByName(String cityName){
+        return cities.get(cityName);
 //    }
 //    public Collection<City> findAllCities(){
 //        return cities.values();
