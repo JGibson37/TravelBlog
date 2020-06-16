@@ -1,29 +1,25 @@
 package org.wecancodeit.reviews;
 
 
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Collection;
 
+@Entity
 public class Country {
-
+    @Id
+    @GeneratedValue
+    private long id;
     private String countryName;
-
-
-
+    @OneToMany(mappedBy = "country")
     private Collection<City> cities;
 
-    private Collection<Country> countries;
-    public Country(String countryName){
+ protected Country(){}
+    public Country(String countryName) {
         this.countryName = countryName;
     }
-
-
-//    public Country(String countryName, Collection <City> cities, Collection<Country> countries) {
-//        this.countryName = countryName;
-//        this.cities = cities;
-//        this.countries = countries;
-//
-//    }
 
 
     public String getCountryName() {
