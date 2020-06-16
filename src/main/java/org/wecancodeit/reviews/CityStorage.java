@@ -77,7 +77,9 @@ public class CityStorage {
 
     }
 
+
     public City getCityByName(String name) {
         return cities.get(name.indexOf(name));
     }
+
 }
