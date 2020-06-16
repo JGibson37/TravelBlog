@@ -18,7 +18,7 @@ public class CityController {
 
     @RequestMapping("cities/{cityName}")
     public String showSingleCity(@PathVariable String cityName, Model model) {
-        model.addAttribute("city", cityStorage.findCityByName(cityName));
+        model.addAttribute("city", cityStorage.getCityByName(cityName));
         return "cities-template";
     }
 

@@ -16,7 +16,7 @@ public class CountryStorage {
         return countries;
     }
 
-    public CountryStorage(){
+    public CountryStorage() {
         Country country1 = new Country("Bahamas");
         Country country2 = new Country("Canada");
         Country country3 = new Country("Italy");
@@ -24,27 +24,13 @@ public class CountryStorage {
         Country country5 = new Country("United States");
 
 
+    }
+
+    public Country getCountryByName(String countryName) {
+        return countries.get(countryName.indexOf(countryName));
 
 
     }
-
-
-
-//    public CountryStorage(){
-//        countries.put("Bahamas", new Country("Bahamas","Nassau","Lucaya"));
-//        countries.put("Canada", new Country("Canada", "Bruce Peninsula", "Stratford"));
-//        countries.put("Italy", new Country("Italy","Cinque Terre","Florence"));
-//        countries.put("South Korea", new Country("South Korea","Jeju Island","Seoul"));
-//        countries.put("United States", new Country("United States", "Gettysburg", "Miami"));
-//    }
-
-//    public Country findCountryByName(String countryName){
-//        return countries.get(countryName);
-//    }
-//    public Collection<Country> findAllCities(){
-//        return countries.values();
-//    }
-
 }
 
 
