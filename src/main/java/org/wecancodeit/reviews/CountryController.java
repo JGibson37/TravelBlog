@@ -15,9 +15,9 @@ public class CountryController {
 
     }
 
-    @RequestMapping("country/{countryName}")
-    public String showSingleCountry(@PathVariable String countryName, Model model) {
-        model.addAttribute("country", countryStorage.getCountryByName(countryName));
+    @RequestMapping("country/{name}")
+    public String showSingleCountry(@PathVariable String name, Model model) {
+        model.addAttribute("country", countryStorage.getCountryByName(name));
         return "country-template";
     }
 

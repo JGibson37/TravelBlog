@@ -19,8 +19,8 @@ public class CityStorage {
         return cityRepo.findAll();
     }
 
-    public City getCityByName(String cityName) {
-        return cityRepo.findByName(cityName);
+    public City findCityByName(String name) {
+        return cityRepo.findCityByName(name);
     }
 
 }

@@ -7,10 +7,12 @@ public class City {
     @Id
     @GeneratedValue
     private long id;
-    private String cityName;
+    private String name;
     private String starRating;
     private String pointOfInterest1;
     private String pointOfInterest2;
+    @Column (length = 100000)
+    @Lob
     private String review;
     private String photo;
     @ManyToOne
@@ -18,8 +20,8 @@ public class City {
 
     protected City(){}
 
-    public City(String cityName, String starRating, String pointOfInterest1, String pointOfInterest2, String review, String photo, Country country) {
-        this.cityName = cityName;
+    public City(String name, String starRating, String pointOfInterest1, String pointOfInterest2, String review, String photo, Country country) {
+        this.name = name;
         this.starRating = starRating;
         this.pointOfInterest1 = pointOfInterest1;
         this.pointOfInterest2 = pointOfInterest2;
@@ -29,7 +31,7 @@ public class City {
     }
 
     public String getCityName() {
-        return cityName;
+        return name;
     }
 
     public String getStarRating() {

@@ -11,17 +11,17 @@ public class Country {
     @Id
     @GeneratedValue
     private long id;
-    private String countryName;
+    private String name;
     @OneToMany(mappedBy = "country")
     private Collection<City> cities;
 
  protected Country(){}
-    public Country(String countryName) {
-        this.countryName = countryName;
+    public Country(String name) {
+        this.name = name;
     }
 
     public String getCountryName() {
-        return countryName;
+        return name;
     }
 
     public Collection<City> getCities() {

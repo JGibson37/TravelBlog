@@ -16,8 +16,8 @@ public class CountryStorage {
         return countryRepo.findAll();
     }
 
-    public Country getCountryByName(String countryName) {
-        return countryRepo.findByName(countryName);
+    public Country getCountryByName(String name) {
+        return countryRepo.findCountryByName(name);
     }
 }
 
