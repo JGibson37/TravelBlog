@@ -1,6 +1,5 @@
 package org.wecancodeit.reviews;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,7 +19,6 @@ public class Country {
     public Country(String countryName) {
         this.countryName = countryName;
     }
-
 
     public String getCountryName() {
         return countryName;
