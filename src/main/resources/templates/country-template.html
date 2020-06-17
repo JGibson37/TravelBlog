@@ -21,14 +21,13 @@
 </nav>
 <h2> Cities To Visit </h2>
 <nav>
-    <ul >
-        <li class="review_list_link" th:each="review:${country.getCities()}">
-            <a class="review-list-links__link" th:href="@{'/review/'+ ${review}}"
-               th:text="${review}"></a>
+
+    <ul>
+        <li th:each="city: ${country.cities} ">
+            <a th:text="${city.cityName}" th:href="@{'/cities/'+${city.cityName}}"></a>
         </li>
     </ul>
-<!--    <div ><a th:text="${country.city1}" href="/cities/Nassau">Nassau</a></div>-->
-<!--    <div ><a th:text="${country.city2}" href="/cities/Lucaya">Lucaya</a></div>-->
+
 </nav>
 </body>
 <footer>

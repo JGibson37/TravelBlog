@@ -20,6 +20,10 @@ public class CountryController {
         model.addAttribute("country", countryStorage.getCountryByName(name));
         return "country-template";
     }
-
+    @RequestMapping("countries")
+    public String showAllCountries(Model model){
+        model.addAttribute("countries", countryStorage.getCountries());
+        return "category-template";
+    }
 
 }
