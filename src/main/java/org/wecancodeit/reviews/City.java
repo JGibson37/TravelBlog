@@ -1,6 +1,7 @@
 package org.wecancodeit.reviews;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class City {
@@ -11,6 +12,10 @@ public class City {
     private String starRating;
     private String pointOfInterest1;
     private String pointOfInterest2;
+
+    @ManyToMany
+    private Collection<Hashtag> hashtags;
+
     @Column (length = 100000)
     @Lob
     private String review;

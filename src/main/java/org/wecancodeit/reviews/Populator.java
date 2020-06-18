@@ -11,6 +11,8 @@ public class Populator implements CommandLineRunner {
     CountryRepository countryRepo;
     @Autowired
     CityRepository cityRepo;
+    @Autowired
+    HashtagRepository hashtagRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -98,5 +100,11 @@ public class Populator implements CommandLineRunner {
         cityRepo.save(miami);
         cityRepo.save(nassau);
         cityRepo.save(seoul);
+
+//        Hashtag active = new Hashtag("Active",);
+//        Hashtag park = new Hashtag("Park",);
+//        Hashtag oceanView = new Hashtag("OceanView",);
+//        Hashtag history = new Hashtag("History",);
+
     }
 }
