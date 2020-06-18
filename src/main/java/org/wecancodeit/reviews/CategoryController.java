@@ -15,7 +15,7 @@ public class CategoryController {
         this.hashtagRepo = hashtagRepo;
     }
 
-    @RequestMapping({"","/"})
+    @RequestMapping({"/category"})
     public String routeToCountries(Model model){
         model.addAttribute("countries",countryRepo.findAll());
         model.addAttribute("hashtags",hashtagRepo.findAll());
