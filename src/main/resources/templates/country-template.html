@@ -14,7 +14,9 @@
 <nav>
     <ul>
         <li>Home</a></li>
-        <li th:each="country: ${country}"></li>
+        <li th:each="navCountry: ${countries}">
+            <a th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
+        </li>
     </ul>
 </nav>
 <h2> Cities To Visit </h2>
