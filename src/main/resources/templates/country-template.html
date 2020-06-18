@@ -12,12 +12,10 @@
 <body>
 <h1 th:text="${country.countryName}"> Bahamas</h1>
 <nav>
-    <div><a href="./category.html">Home</a></div>
-    <div><a href="./bahamas.html">Bahamas</a></div>
-    <div><a href="./canada.html">Canada</a></div>
-    <div><a href="./italy.html">Italy</a></div>
-    <div><a href="./south-korea.html">South Korea</a></div>
-    <div><a href="./united-states.html">United States</a></div>
+    <ul>
+        <li>Home</a></li>
+        <li th:each="country: ${country}"></li>
+    </ul>
 </nav>
 <h2> Cities To Visit </h2>
 <nav>
