@@ -7,13 +7,13 @@
     <title>Bahamas</title>
     <link rel="stylesheet" href="./CSS/countries-layout.css" />
     <link rel="stylesheet" href="./CSS/parent-layout.css" />
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
 </head>
 <body>
 <h1 th:text="${country.countryName}"> Bahamas</h1>
 <nav>
     <ul>
-        <li>Home</li>
+        <li><a href="/category.html">Home</a></li>
         <li th:each="navCountry: ${countries}">
             <a th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
         </li>
