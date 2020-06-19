@@ -1,6 +1,8 @@
 package org.wecancodeit.reviews;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
@@ -12,20 +14,18 @@ public class City {
     private String starRating;
     private String pointOfInterest1;
     private String pointOfInterest2;
-
-    @ManyToMany
-    private Collection<Hashtag> hashtags;
-
     @Column (length = 100000)
     @Lob
     private String review;
     private String photo;
     @ManyToOne
     private Country country;
+    @ManyToMany
+    private Collection<Hashtag> hashtags;
 
     protected City(){}
 
-    public City(String name, String starRating, String pointOfInterest1, String pointOfInterest2, String review, String photo, Country country) {
+    public City(String name, String starRating, String pointOfInterest1, String pointOfInterest2, String review, String photo, Country country, Hashtag ... hashtags) {
         this.name = name;
         this.starRating = starRating;
         this.pointOfInterest1 = pointOfInterest1;
@@ -33,6 +33,7 @@ public class City {
         this.review = review;
         this.photo = photo;
         this.country = country;
+        this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
 
     public String getCityName() {
@@ -57,6 +58,22 @@ public class City {
 
     public String getPhoto() {
         return photo;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
     }
 
 

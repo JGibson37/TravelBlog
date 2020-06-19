@@ -18,11 +18,12 @@ public class Hashtag {
 
     protected Hashtag() {}
 
-    public Hashtag(String hashtag, Collection<City> cities){
+    public Hashtag(String hashtag){
         this.hashtag = hashtag;
-        this.cities = cities;
     }
-
+    public long getId() {
+        return id;
+    }
     public String getHashtag() {
         return hashtag;
     }
