@@ -31,9 +31,10 @@
     don't even like fish!)
 </p>
 
-<form action="hashtags/add" method="POST">
+<form action="/hashtags/add" method="POST">
     <label>Insert new hashtag for this review.</label>
     <input type="text" name="hashtag"/>
+    <input type="hidden" name="cityName" th:value="${city.cityName}"/>
     <button type="submit">Submit</button>
 </form>
 

@@ -23,4 +23,7 @@ public class CityStorage {
         return cityRepo.findCityByName(name);
     }
 
+    public void save(City city) {
+        cityRepo.save(city);
+    }
 }

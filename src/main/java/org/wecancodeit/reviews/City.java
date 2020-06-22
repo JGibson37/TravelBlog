@@ -76,7 +76,8 @@ public class City {
         return hashtags;
     }
 
-
-
+    public void addHashtag(Hashtag hashtagToAdd) {
+        hashtags.add(hashtagToAdd);
+    }
 }
 
