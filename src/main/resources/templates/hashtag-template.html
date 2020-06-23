@@ -5,16 +5,16 @@
     <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <title>&#35;Active</title>
-    <link rel="stylesheet" href="./CSS/review-layout.css" />
-    <link rel="stylesheet" href="./CSS/parent-layout.css" />
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/review-layout.css" />
+    <link rel="stylesheet" href="/CSS/parent-layout.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
 </head>
 <body>
 <li>
-    <a href="/category.html">Home</a>
+    <a th:href="@{'/category/'}">Home</a>
 </li>
 <h1 th:replace="fragments/h1 :: h1">&#35;Active</h1>
-<h2 th:text="${city.cityName}">Bruce Peninsula Review</h2>
+<h2 th:text="${hashtag.cities}">Bruce Peninsula Review</h2>
 <ul>
     <li th:each="city: ${hashtag.cities}">
         <p th:text="${city.review}">The Bruce Peninsula is an astounding area to visit if you enjoy hiking and
