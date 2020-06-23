@@ -25,8 +25,8 @@
 <h2>Search reviews by hashtag</h2>
 <nav>
     <ul>
-        <li th:each="allHashtags : ${hashtag}">
-            <a th:text="${allHashtags.hashtag}" th:href="@{'/hashtag/' + ${allHashtags.hashtag}}"></a>
+        <li th:each="hash: ${hashtag.id}">
+            <a th:text="${hash.}" th:href="@{'/hashtag/' + ${hashtag.hashtag}}"></a>
         </li>
     </ul>
 </nav>
