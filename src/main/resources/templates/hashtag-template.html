@@ -13,17 +13,18 @@
 <li>
     <a th:href="@{'/category/'}">Home</a>
 </li>
-<h1 th:replace="fragments/h1 :: h1">&#35;Active</h1>
-<h2 th:text="${hashtag.cities}">Bruce Peninsula Review</h2>
+<h1 th:text="'&#35' + ${hashtag.hashtag}">&#35;Active</h1>
+
 <ul>
     <li th:each="city: ${hashtag.cities}">
+        <h2 th:text="${city.cityName}">Bruce Peninsula Review</h2>
         <p th:text="${city.review}">The Bruce Peninsula is an astounding area to visit if you enjoy hiking and
             nature. The winding pine forest trails and towering cliffs into crystal
             clear water demand you explore them. After exerting yourself in your
             travels, The Fish And Chip Place serves amazing white-fish tacos(And I
             don’t even like fish!)
         </p>
-        <img src="images/brucepeninsulacliffs.jpg" th:attr="src=@{/images/brucepeninsulacliffs.jpg}"/>
+        <img th:src="@{${city.photo}}"/>
     </li>
 </ul>
 </body>

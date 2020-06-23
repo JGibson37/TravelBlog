@@ -17,7 +17,7 @@
 <h1 th:text="${city.cityName}">Bruce Peninsula Review</h1>
 <p th:text="${city.starRating}"> Star Rating: 5 / 5</p>
 <div th:each="navHashtag: ${city.hashtags}">
-    <a class="hashtag" th:text="${navHashtag.hashtag}" th:href="@{'/hashtag/' + ${navHashtag.hashtag}}"></a>
+    <a class="hashtag" th:text="${navHashtag.hashtag}" th:href="@{'/hashtags/' + ${navHashtag.id}}"></a>
 </div>
 <p>Points of Interest:</p>
 <ul>
