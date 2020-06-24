@@ -13,6 +13,6 @@ body{
     background-image: url("https://raw.githubusercontent.com/2020-Summer-Cohort/reviews-site-codingonthefly/dev/src/main/resources/static/images/home.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    opacity: 0.85;
-    
+    opacity: 1;
+      
 }
