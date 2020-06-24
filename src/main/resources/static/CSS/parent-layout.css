@@ -6,13 +6,7 @@
   list-style: none;
 }
 
-/* .space-between {
-  justify-content: space-between;
-} */
-
 .flex-item {
-  /* padding: 20px; */
-  /* height: 50px; */
   margin: 5px;
   color: white;
   text-align: center;
@@ -21,7 +15,6 @@
 .main-nav li {
   list-style: none;
 }
-
 
 footer {
     position: fixed;
@@ -33,3 +26,9 @@ footer {
 .main-nav {
   display: flex;
 }
+
+#brand-name {
+  padding-left: 20px;
+  padding-top: 40px;
+}
+

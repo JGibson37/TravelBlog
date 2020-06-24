@@ -8,26 +8,45 @@
     <link rel="stylesheet" href="/CSS/review-layout.css" />
     <link rel="stylesheet" href="/CSS/parent-layout.css" />
     <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/hashtag-layout.css">
 </head>
 <body>
-<h1>Travel Reviews On The Fly </h1>
-<nav>
-    <div><a th:href="@{'/category/'}">Home</a></div>
-</nav>
-<h2 th:text="'&#35' + ${hashtag.hashtag}">&#35;Active</h2>
+<div class="navbar-photo">
+    <header>
+    <h1 id="brand-name">Travel Reviews On The Fly </h1>
+    <nav class="main-nav">
+        <ul class="flex-container space-between">
+            <li class="flex-item">
+                <a class="navlink-color" th:href="@{'/category/'}">Home</a>
+            </li>
+            <li class="flex-item" th:each="navCountry: ${countries}">
+                <a class="navlink-color" th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+</div>
+<h2 id="hashtag" th:text="'&#35' + ${hashtag.hashtag}">&#35;Active</h2>
 
-<ul>
-    <li th:each="city: ${hashtag.cities}">
-        <h2 th:text="${city.cityName}">Bruce Peninsula Review</h2>
-        <p th:text="${city.review}">The Bruce Peninsula is an astounding area to visit if you enjoy hiking and
-            nature. The winding pine forest trails and towering cliffs into crystal
-            clear water demand you explore them. After exerting yourself in your
-            travels, The Fish And Chip Place serves amazing white-fish tacos(And I
-            don’t even like fish!)
-        </p>
-        <img th:src="@{${city.photo}}"/>
-    </li>
-</ul>
+
+    <ul>
+        <li class="hashtag-city" th:each="city: ${hashtag.cities}">
+            <div class="hashtag-img">
+                <img th:src="@{${city.photo}}"/>
+            </div>
+            <div class="hashtag-content">
+                <h2 th:text="${city.cityName}">Bruce Peninsula Review</h2>
+                <p th:text="${city.review}">The Bruce Peninsula is an astounding area to visit if you enjoy hiking and
+                    nature. The winding pine forest trails and towering cliffs into crystal
+                    clear water demand you explore them. After exerting yourself in your
+                    travels, The Fish And Chip Place serves amazing white-fish tacos(And I
+                    don’t even like fish!)
+                </p>
+            </div>
+        </li>
+    </ul>
+
+
 </body>
 <footer>
     <div>&copy; CodingOnTheFly 2020</div>

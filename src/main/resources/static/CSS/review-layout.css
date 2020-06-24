@@ -2,9 +2,9 @@ img {
     max-height: 500px;
     border-radius: 20px;
     display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 300px;
 }
 
 .visiting-cities {
@@ -28,8 +28,28 @@ img {
     text-align: center;
     margin-top: 100px;
 }
+
 .review-container {
+    display: flex;
+    border-radius: 20px;
+    padding: 35px 30px 35px 5px;
     margin-left: 40px;
     margin-right: 40px;
+
+}
+
+.review-container-1 {
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#city-header {
+    margin-left: 40px;
+}
+
+#add-hashtag {
+    margin-top: 50px;
+    margin-left: 40px;
 }
 

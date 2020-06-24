@@ -27,9 +27,10 @@
     </header>
 </div>
 
-<div class="review-container">
-<h2 th:text="${city.cityName}">Bruce Peninsula Review</h2>
 
+<h2 id="city-header" th:text="${city.cityName}">Bruce Peninsula Review</h2>
+
+<div class="review-container">
 <div class="review-container-1">
     <img th:src="${city.photo}" alt="Bruce Peninsula Img"/>
 </div>
@@ -37,7 +38,7 @@
 <div class="review-container-2">
     <p th:text="${city.starRating}"> Star Rating: 5 / 5</p>
     <div th:each="navHashtag: ${city.hashtags}">
-        <a class="hashtag" th:text="${navHashtag.hashtag}" th:href="@{'/hashtags/' + ${navHashtag.id}}"></a>
+        <a class="hashtag" th:text="'&#35' + ${navHashtag.hashtag}" th:href="@{'/hashtags/' + ${navHashtag.id}}"></a>
     </div>
     <p>Points of Interest:</p>
     <ul>
@@ -52,13 +53,13 @@
         don't even like fish!)
     </p>
 </div>
-<form action="/hashtags/add" method="POST">
-    <label>Insert new hashtag for this review.</label>
+</div>
+<form id="add-hashtag" action="/hashtags/add" method="POST">
+    <label>Insert new hashtag for this review:</label>
     <input type="text" name="hashtag"/>
     <input type="hidden" name="cityName" th:value="${city.cityName}"/>
-    <button type="submit">Submit</button>
+    <button id="submit-button" type="submit">Submit</button>
 </form>
-</div>
 
 
 </body>
