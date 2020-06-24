@@ -47,7 +47,7 @@ header {
     padding-right: 10px;
 }
 
-.flex-item .navlink-color {
+.flex-item {
     border: 2px solid white;
     border-radius: 10px;
     padding-left: 10px;

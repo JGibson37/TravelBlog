@@ -6,14 +6,13 @@
   list-style: none;
 }
 
-.space-between {
+/* .space-between {
   justify-content: space-between;
-}
+} */
 
 .flex-item {
-  padding: 20px;
-  width: 60px;
-  height: 50px;
+  /* padding: 20px; */
+  /* height: 50px; */
   margin: 5px;
   color: white;
   text-align: center;
@@ -30,6 +29,7 @@ footer {
     bottom: 0;
     text-align: center;
   }
-  .main-nav{
+
+.main-nav {
   display: flex;
-  }
+}
