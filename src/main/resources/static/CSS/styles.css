@@ -2,7 +2,7 @@
 }
 
 body{
-    background-color: rgba(0, 238, 255, 0.616);
+    background-color: rgba(4, 156, 167, 0.616);
 }
 
 .hashtag {
@@ -13,6 +13,58 @@ body{
     background-image: url("https://raw.githubusercontent.com/2020-Summer-Cohort/reviews-site-codingonthefly/dev/src/main/resources/static/images/home.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    opacity: 0.85;
-    
+    opacity: 1;
+    color: white;
+}
+
+.weekly-container, .monthly-container {
+    background-color: lightblue;
+}
+
+.navlink-color, .navlink-color:visited {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: rgba(10, 10, 10, 0.25);
+}
+
+#brand-name {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.hashtag-links {
+    text-decoration: none;
+    color: white;
+}
+
+.flex-container .hashtag-links {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.flex-item .navlink-color {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Country Page Style */
+
+.visiting-cities li a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.visiting-cities li {
+    list-style: none;
 }

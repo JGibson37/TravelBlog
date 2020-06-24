@@ -1,0 +1,24 @@
+.visiting-cities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 15px 0px 5px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.visiting-cities li {
+    padding: 70px;
+}
+
+#cities-to-visit {
+    text-align: center;
+    margin-top: 100px;
+}
+.country-name {
+    margin-left: 40px;
+}
