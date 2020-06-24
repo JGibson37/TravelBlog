@@ -17,11 +17,12 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Country bahamas = new Country("Bahamas");
-        Country canada = new Country("Canada");
-        Country italy = new Country("Italy");
-        Country southKorea = new Country("South Korea");
-        Country unitedStates = new Country("United States");
+        Country bahamas = new Country("Bahamas", "The Bahamas, officially as the Commonwealth of The Bahamas, is a country in the Caribbean. The Bahamas are know for its pristine white sand beaches and turquoise waters.");
+        Country canada = new Country("Canada", "Canada is located at the top of North America. Canada is best known for its hockey, maple syrup, and brutally cold winters. ");
+        Country italy = new Country("Italy", "Italy is a European country with a long Mediterranean coastline. Italy is best know for its cuisine and history.");
+        Country southKorea = new Country("South Korea", "South Korea is an East Asian nation on the southern half of the Korean Peninsula and shares one of the world’s most heavily militarized borders with North Korea. This country is best known for it's K-Pop, fashion trends, and Buddhist Temples.");
+        Country unitedStates = new Country("United States","The U.S. is a country of 50 states covering a vast swath of North America, with Alaska in the northwest and Hawaii extending the nation’s presence into the Pacific Ocean. Its cultural imprint spans the world, led in large part by its popular culture expressed in music, movies and television.");
+
         countryRepo.save(bahamas);
         countryRepo.save(canada);
         countryRepo.save(italy);

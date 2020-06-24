@@ -24,10 +24,5 @@ public class CategoryController {
         return "category-template";
     }
 
-    @GetMapping("hashtags/{id}")
-    public String showSingleHashtag(@PathVariable Long id, Model model) {
-        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
-        return "category-template";
-    }
 
 }

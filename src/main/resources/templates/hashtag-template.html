@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="/CSS/styles.css" />
 </head>
 <body>
-<li>
-    <a th:href="@{'/category/'}">Home</a>
-</li>
-<h1 th:text="'&#35' + ${hashtag.hashtag}">&#35;Active</h1>
+<h1>Travel Reviews On The Fly </h1>
+<nav>
+    <div><a th:href="@{'/category/'}">Home</a></div>
+</nav>
+<h2 th:text="'&#35' + ${hashtag.hashtag}">&#35;Active</h2>
 
 <ul>
     <li th:each="city: ${hashtag.cities}">

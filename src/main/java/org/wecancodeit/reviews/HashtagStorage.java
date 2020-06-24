@@ -12,10 +12,17 @@ public class HashtagStorage {
         this.hashtagRepo = hashtagRepo;
     }
 
-    public Hashtag findHashtagById(Long id){
-        return hashtagRepo.findHashtagById(id);
+    public Iterable<Hashtag> getHashtags() {
+        return hashtagRepo.findAll();
     }
-
-
+    public Hashtag findHashtagByHashtag(String hashtag) {
+        return hashtagRepo.findHashtagByHashtag(hashtag);
+    }
+    public void save(Hashtag hashtag) {
+        hashtagRepo.save(hashtag);
+    }
+public Hashtag findHashtagById(Long id){
+    return hashtagRepo.findHashtagById(id);
+}
 
 }

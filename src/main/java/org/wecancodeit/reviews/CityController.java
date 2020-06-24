@@ -13,7 +13,6 @@ public class CityController {
 
     public CityController(CityStorage cityStorage) {
         this.cityStorage = cityStorage;
-
     }
 
     @RequestMapping("cities/{name}")
@@ -21,5 +20,6 @@ public class CityController {
         model.addAttribute("city", cityStorage.findCityByName(name));
         return "cities-template";
     }
+
 
 }
