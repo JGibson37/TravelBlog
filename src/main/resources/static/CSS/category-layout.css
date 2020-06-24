@@ -1,0 +1,24 @@
+.new-reviews {
+    display: flex;
+    align-items: flex-start;
+}
+
+.weekly-container, .monthly-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hashtag-nav .hashtag-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+}
+
+.hashtag-container li {
+    list-style: none;
+}
+

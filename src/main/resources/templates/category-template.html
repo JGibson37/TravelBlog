@@ -5,23 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Review Site</title>
-    <link rel="stylesheet" href="/CSS/category-layout.css" />
-    <link rel="stylesheet" href="/CSS/parent-layout.css" />
-    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/category-layout.css" />
+    <link rel="stylesheet" href="./CSS/parent-layout.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
 </head>
 <body>
+
+<div class="navbar-photo">
 <h1>Travel Reviews On The Fly </h1>
 <nav class="main-nav">
-    <ul>
-        <li>
+    <ul class="flex-container space-between">
+        <li class="flex-item">
             <a th:href="@{'/category/'}">Home</a>
         </li>
-        <li th:each="navCountry: ${countries}">
+        <li class="flex-item" th:each="navCountry: ${countries}">
             <a th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
         </li>
     </ul>
 </nav>
-<img class="home-img" src="/images/home.jpg" alt="Beach Img"/>
+</div>
+
 <p>Welcome to the We Can Code It's travel review site, Travel Reviews On The Fly. Above you have access to
     our writer's reviews. Once in the review, you can leave additional hashtags. Your hashtags
     will be showcased in real time on the review page and the home screen. We also have an option
@@ -29,8 +32,9 @@
     below first!</p>
 <p>New reviews are posted weekly on Thursdays. Don't forget to check back if you don't see what you are looking
     for this week?</p>
-<div>
-    <p>
+<div class="new-reviews">
+    <div class="weekly-container">
+    <p class="weekly">
         New reviews to be posted next week:
     </p>
     <ul>
@@ -51,7 +55,9 @@
         </li>
         <li>Greece: Athens & Crete</li>
     </ul>
-    <p>
+    </div>  
+    <div class="monthly-container">
+    <p class="monthly">
         Additional reviews being posted this Month:
     </p>
     <ul>
@@ -74,12 +80,13 @@
         <li>Japan: Kyoto, Tokyo, & Nara</li>
         <li>Thailand:Bangkok</li>
     </ul>
+    </div>
 </div>
 <h2>Search reviews by hashtag</h2>
-<nav>
-    <ul>
-        <li th:each="hash: ${hashtags}">
-            <a th:text="${hash.hashtag}" th:href="@{'/hashtag/' + ${hash.hashtag}}"></a>
+<nav class="hashtag-nav">
+    <ul class="hashtag-container">
+        <li class="flex-container" th:each="hash: ${hashtags}">
+            <a th:text="'&#35' + ${hash.hashtag}" th:href="@{'/hashtag/' + ${hash.hashtag}}"></a>
         </li>
     </ul>
 </nav>
