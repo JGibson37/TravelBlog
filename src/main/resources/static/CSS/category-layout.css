@@ -1,3 +1,4 @@
+
 .new-reviews {
     display: flex;
     justify-content: center;
@@ -29,6 +30,7 @@
     display: flex;
     justify-content: space-evenly;
 }
+
 
 .monthly-container {
     margin-left: 50px;

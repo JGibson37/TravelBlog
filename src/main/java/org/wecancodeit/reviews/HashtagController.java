@@ -13,21 +13,19 @@ public class HashtagController {
     private HashtagRepository hashtagRepo;
     private HashtagStorage hashtagStorage;
     private CityStorage cityStorage;
+    private CountryRepository countryRepo;
 
-    public HashtagController(HashtagRepository hashtagRepo,HashtagStorage hashtagStorage,CityStorage cityStorage) {
+
+    public HashtagController(HashtagRepository hashtagRepo,HashtagStorage hashtagStorage,CityStorage cityStorage,CountryRepository countryRepo) {
         this.hashtagRepo = hashtagRepo;
         this.hashtagStorage = hashtagStorage;
         this.cityStorage = cityStorage;
+        this.countryRepo=countryRepo;
     }
-
-//    @GetMapping("hashtags/{id}")
-//    public String showSingleHashtag(@PathVariable Long id, Model model) {
-//        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
-//        return "hashtag-template";
-//    }
 
     @RequestMapping("hashtag/{hashtag}")
     public String showSingleHashTag(@PathVariable String hashtag, Model model) {
+        model.addAttribute("countries",countryRepo.findAll());
         model.addAttribute("hashtag", hashtagStorage.findHashtagByHashtag(hashtag));
         return "hashtag-template";
     }

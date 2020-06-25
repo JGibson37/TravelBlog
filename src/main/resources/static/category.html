@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
-    <h1>Travel Review Site</h1>
-    <nav class="main-nav">
-      <div><a href="./category.html">Home</a></div>
-      <div><a href="./bahamas.html">Bahamas</a></div>
-      <div><a href="./canada.html">Canada</a></div>
-      <div><a href="./italy.html">Italy</a></div>
-      <div><a href="./south-korea.html">South Korea</a></div>
-      <div><a href="./united-states.html">United States</a></div>
-    </nav>
+  <div class="navbar-photo">
+    <header>
+      <h1 id="brand-name">Travel Reviews On The Fly </h1>
+      <nav class="main-nav">
+        <ul class="flex-container space-between">
+          <li class="flex-item">
+            <a class="navlink-color" th:href="@{'/category/'}">Home</a>
+          </li>
+          <li class="flex-item" th:each="navCountry: ${countries}">
+            <a class="navlink-color" th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
     <h2>Search reviews by hashtag</h2>
     <nav>
       <div><a href="./active.html">#Active</a></div>

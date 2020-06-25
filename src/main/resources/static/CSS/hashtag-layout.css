@@ -1,22 +1,32 @@
+
 .hashtag-city {
     display: flex;
     border-radius: 20px;
     padding: 30px 20px 20px 30px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 35px;
 }
 
 .hashtag-content {
-    margin-left: 30px; 
-    margin-right: 40px;
-}
-
-.hashtag-img {
-    /* padding-bottom: 50px; */
+    margin-left: 50px; 
+    margin-right: 50px;
+    margin: 0;
+    padding-left: 1em;
+    margin-bottom: auto;
 }
 
 #hashtag {
     margin-left: 40px;
+}
 
+.hashtag-img2{ 
+ height: 300px;
+}
+
+.hashtag-content1{
+    margin: 0;
+}
+.hashtag-content1{
+    margin: 0;
 }

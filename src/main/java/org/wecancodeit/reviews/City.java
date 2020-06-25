@@ -25,7 +25,10 @@ public class City {
 
     protected City(){}
 
-    public City(String name, String starRating, String pointOfInterest1, String pointOfInterest2, String review, String photo, Country country, Hashtag ... hashtags) {
+    public City(String name, String starRating, String
+            pointOfInterest1, String pointOfInterest2,
+                String review, String photo, Country country,
+                Hashtag ... hashtags) {
         this.name = name;
         this.starRating = starRating;
         this.pointOfInterest1 = pointOfInterest1;
