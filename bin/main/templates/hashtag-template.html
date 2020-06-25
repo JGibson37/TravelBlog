@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>&#35;Active</title>
+    <link rel="stylesheet" href="/CSS/review-layout.css" />
+    <link rel="stylesheet" href="/CSS/parent-layout.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+</head>
+<body>
+<h1>Travel Reviews On The Fly </h1>
+<nav>
+    <div><a th:href="@{'/category/'}">Home</a></div>
+</nav>
+<h2 th:text="'&#35' + ${hashtag.hashtag}">&#35;Active</h2>
+
+<ul>
+    <li th:each="city: ${hashtag.cities}">
+        <h2 th:text="${city.cityName}">Bruce Peninsula Review</h2>
+        <p th:text="${city.review}">The Bruce Peninsula is an astounding area to visit if you enjoy hiking and
+            nature. The winding pine forest trails and towering cliffs into crystal
+            clear water demand you explore them. After exerting yourself in your
+            travels, The Fish And Chip Place serves amazing white-fish tacos(And I
+            don’t even like fish!)
+        </p>
+        <img th:src="@{${city.photo}}"/>
+    </li>
+</ul>
+</body>
+<footer>
+    <div>&copy; CodingOnTheFly 2020</div>
+</footer>
+</html>

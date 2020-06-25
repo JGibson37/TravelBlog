@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahamas</title>
+    <link rel="stylesheet" href="/CSS/countries-layout.css" />
+    <link rel="stylesheet" href="/CSS/parent-layout.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+</head>
+<body>
+<h1>Travel Reviews On The Fly </h1>
+<nav>
+    <ul>
+        <li>
+            <a th:href="@{'/category/'}">Home</a>
+        </li>
+        <li th:each="navCountry: ${countries}">
+            <a th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
+        </li>
+    </ul>
+</nav>
+<h2 th:text="${country.countryName}"> Bahamas</h2>
+<p th:text="${country.description}"></p>
+<h3> Cities To Visit </h3>
+<nav>
+
+    <ul>
+        <li th:each="city: ${country.cities} ">
+            <a th:text="${city.cityName}" th:href="@{'/cities/'+${city.cityName}}"></a>
+        </li>
+    </ul>
+
+</nav>
+</body>
+<footer>
+    <div> &copy; CodingOnTheFly 2020</div>
+</footer>
+</html>
