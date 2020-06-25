@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gettysburg</title>
+    <link rel="stylesheet" href="./CSS/review-layout.css" />
+    <link rel="stylesheet" href="./CSS/parent-layout.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+  </head>
+  <body>
+  <div class="navbar-photo">
+    <header>
+      <h1 id="brand-name">Travel Reviews On The Fly </h1>
+      <nav class="main-nav">
+        <ul class="flex-container space-between">
+          <li class="flex-item">
+            <a class="navlink-color" th:href="@{'/category/'}">Home</a>
+          </li>
+          <li class="flex-item" th:each="navCountry: ${countries}">
+            <a class="navlink-color" th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+    <h1>Gettysburg Review</h1>
+    <p>Star Rating: 4 / 5</p>
+    <div><a class="hashtag" href="./history.html"> #History</a> <a class="hashtag" href="./active.html"> #Active</a></div>
+    <p>Point of Interest:
+      <ul>
+        <li>Gettysburg National Military Park</li>
+        <li>The Links At Gettysburg</li>
+      </ul>
+    </p>
+    <p>
+      Gettysburg National Military Park is rated number one on things to do in Gettysburg, Pennsylvania, this
+      historic military landmark was once a major turning point in the Civil
+      War. Thought to have been one of the bloodiest battles during the Civil
+      War, this was also a pivotal moment in history that gave inspiration for
+      Abraham Lincoln’s “Gettysburg Address”. Many locals say that this landmark
+      is also extremely haunted.
+   
+      For anyone who is an avid golfer, the Links At Gettysburg links-style course presents a
+      demanding layout with unforgiving fairways and greens, as well as various
+      steep rock cliffs, lakes, and waterfalls spanning across its 18 holes. At
+      a length of 7069 yards, this par-72 course is one of the larger public
+      courses in the area, making it a challenge for some golfers off the tee.
+      After the turn, or at the end of your round, The Links At Gettysburg also
+      has a spacious indoor/outdoor bar with great food and beverages.
+      
+    </p>
+    <img src="images/gettysburg-links.jpg" alt="Gettysburg Img" />
+  </body>
+ 
+</html>

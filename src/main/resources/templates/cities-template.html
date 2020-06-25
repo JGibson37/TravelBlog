@@ -67,7 +67,17 @@
     <button id="submit-button" type="submit">Submit</button>
 </form>
 
+<div th:each="navComment: ${city.comments}">
+    <p class="comment" th:text="${navComment.comment}"
+       th:href="@{'/comment/' + ${navComment.comment}}"></p>
+</div>
 
+<form id="add-comment" action="/comments/add" method="POST">
+    <label>Insert new comment for this review:</label>
+    <input type="text" name="comment"/>
+    <input type="hidden" name="cityName" th:value="${city.cityName}"/>
+    <button id="submit" type="submit">Submit</button>
+</form>
 </body>
 <footer>
     <div> &copy; CodingOnTheFly 2020</div>

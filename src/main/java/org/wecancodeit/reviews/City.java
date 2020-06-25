@@ -22,7 +22,8 @@ public class City {
     private Country country;
     @ManyToMany
     private Collection<Hashtag> hashtags;
-
+    @ManyToMany
+    private Collection<Comment> comments;
     protected City(){}
 
     public City(String name, String starRating, String
@@ -37,6 +38,10 @@ public class City {
         this.photo = photo;
         this.country = country;
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
+    }
+
+    public Collection<Comment> getComments() {
+        return comments;
     }
 
     public String getCityName() {
@@ -81,6 +86,9 @@ public class City {
 
     public void addHashtag(Hashtag hashtagToAdd) {
         hashtags.add(hashtagToAdd);
+    }
+
+    public void addComment(Comment commentToAdd) { comments.add(commentToAdd);
     }
 }
 

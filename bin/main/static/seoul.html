@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/review-layout.css" />
+    <link rel="stylesheet" href="./CSS/parent-layout.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+  </head>
+  <body>
+  <div class="navbar-photo">
+    <header>
+      <h1 id="brand-name">Travel Reviews On The Fly </h1>
+      <nav class="main-nav">
+        <ul class="flex-container space-between">
+          <li class="flex-item">
+            <a class="navlink-color" th:href="@{'/category/'}">Home</a>
+          </li>
+          <li class="flex-item" th:each="navCountry: ${countries}">
+            <a class="navlink-color" th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+    <h1>Seoul Review</h1>
+    <p>Star Rating: 4 / 5</p>
+    <div><a class="hashtag" href="./history.html"> #History</a></div>
+    <p>Points of Interest: 
+      <ul> 
+        <li>Gyeongbokgung Palace</li>
+        <li>King Sejong's Statue</li>
+      </ul>
+    </p>
+    <p>
+      This site is a historical restoration of the original ancient palace
+      constructed by the Joseon Empire. The original was destroyed by the
+      japanese invasions in 1592-1598. It features historically accurate
+      buildings, with numerous workers in historically accurate attire.
+    
+      King Sejong ruled from 1418-1450. He was most notably known for creating
+      the Korean language Hangul. He was very progressive in other manners,
+      passing laws to help establish more tourism, scientific discovery, and
+      regional stabilization to Korea.  
+      
+    </p>
+    <img src="images/Castle.jpg" alt= "Seoul Img" />
+  </body>
+  <footer>
+    <div> &copy; CodingOnTheFly 2020</div>
+  </footer>
+</html>

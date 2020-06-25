@@ -12,11 +12,13 @@ public class CityController {
     private CityStorage cityStorage;
     private CountryRepository countryRepo;
     private HashtagRepository hashtagRepo;
+    private CommentRepository commentRepo;
 
-    public CityController(CityStorage cityStorage,CountryRepository countryRepo, HashtagRepository hashtagRepo) {
+    public CityController(CityStorage cityStorage,CountryRepository countryRepo, HashtagRepository hashtagRepo, CommentRepository commentRepo) {
         this.cityStorage = cityStorage;
         this.countryRepo= countryRepo;
         this.hashtagRepo=hashtagRepo;
+        this.commentRepo=commentRepo;
     }
 
     @RequestMapping("cities/{name}")
@@ -24,6 +26,7 @@ public class CityController {
         model.addAttribute("countries",countryRepo.findAll());
         model.addAttribute("city", cityStorage.findCityByName(name));
         model.addAttribute("hashtags",hashtagRepo.findAll());
+        model.addAttribute("comments", commentRepo.findAll());
         return "cities-template";
     }
 

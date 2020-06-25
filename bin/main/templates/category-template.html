@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Travel Review Site</title>
+    <link href="/CSS/category-layout.css" rel="stylesheet"/>
+    <link href="/CSS/parent-layout.css" rel="stylesheet"/>
+    <link href="/CSS/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="navbar-photo">
+    <header>
+        <h1 id="brand-name">Travel Reviews On The Fly </h1>
+        <nav class="main-nav">
+            <ul class="flex-container space-between">
+                <li class="flex-item">
+                    <a class="navlink-color" th:href="@{'/category/'}">Home</a>
+                </li>
+                <li class="flex-item" th:each="navCountry: ${countries}">
+                    <a class="navlink-color" th:href="@{'/country/' +${navCountry.countryName}}"
+                       th:text="${navCountry.countryName}"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<div class="welcome-container">
+    <p class="welcome-info">Welcome to the We Can Code It's travel review site, Travel Reviews On The Fly. Above you
+        have access to
+        our writer's reviews. Once in the review, you can leave additional hashtags. Your hashtags
+        will be showcased in real time on the review page and the home screen. We also have an option
+        to search reviews by hashtag. If you know you want an #OceanView or an #Active vacation, head
+        below first!</p>
+    <p class="welcome-info">New reviews are posted weekly on Thursdays. Don't forget to check back if you don't see what
+        you are looking
+        for this week?</p>
+
+    <div class="new-reviews">
+        <div class="weekly-container">
+            <p class="weekly">
+                New reviews to be posted next week:
+            </p>
+            <ul>
+                <li>
+                    Mexico: Mexico City & Cancun
+                </li>
+                <li>
+                    Canada: Toronto, Banff & Calgary
+                </li>
+                <li>
+                    USA: New York, San Francisco, LA, Columbus, Atlanta
+                </li>
+                <li>
+                    Germany: Berlin
+                </li>
+                <li>
+                    Italy: Rome
+                </li>
+                <li>
+                    Greece: Athens & Crete
+                </li>
+            </ul>
+        </div>
+
+        <div class="monthly-container">
+            <p class="monthly">
+                Additional reviews being posted this month:
+            </p>
+            <ul>
+                <li>
+                    India: Delhi, Goa, Agra, Mumbai, Udaipur, & Jaipur
+                </li>
+                <li>
+                    Russia: Moscow, Saint Petersburg, Peterof, Lake Baikal
+                </li>
+                <li>
+                    Greenland: Nuuk
+                </li>
+                <li>
+                    France: Paris, Nice, & French Riviera
+                </li>
+                <li>
+                    Italy: Tuscany & Naples
+                </li>
+                <li>Greece: Santorini & Mykonos</li>
+                <li>Japan: Kyoto, Tokyo, & Nara</li>
+                <li>Thailand:Bangkok</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<h2 id="hashtag-heading">Search reviews by hashtag</h2>
+<nav class="hashtag-nav">
+    <ul class="hashtag-container">
+        <li class="flex-container" th:each="hash: ${hashtags}">
+            <a class="hashtag-links" th:text="'&#35' + ${hash.hashtag}"
+               th:href="@{'/hashtag/' + ${hash.hashtag}}"></a>
+        </li>
+    </ul>
+</nav>
+
+</body>
+<footer>
+    <div> &copy; CodingOnTheFly 2020</div>
+</footer>
+</html>

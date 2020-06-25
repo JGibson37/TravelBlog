@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miami</title>
+    <link rel="stylesheet" href="./CSS/review-layout.css" />
+    <link rel="stylesheet" href="./CSS/parent-layout.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+  </head>
+  <body>
+  <div class="navbar-photo">
+    <header>
+      <h1 id="brand-name">Travel Reviews On The Fly </h1>
+      <nav class="main-nav">
+        <ul class="flex-container space-between">
+          <li class="flex-item">
+            <a class="navlink-color" th:href="@{'/category/'}">Home</a>
+          </li>
+          <li class="flex-item" th:each="navCountry: ${countries}">
+            <a class="navlink-color" th:text="${navCountry.countryName}" th:href="@{'/country/' +${navCountry.countryName}}"></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+    <h1>Miami Review</h1>
+    <p>Star Rating: 4 / 5</p>
+    <div><a class="hashtag" href="./history.html">#History</a> <a class="hashtag" href="./active.html"> #Active</a>
+      <a class="hashtag" href="./ocean-view.html"> #OceanView</a></div>
+    <p>Points of Interest:</p>
+    <ul>
+      <li>Vizcaya Museum and Gardens</li>
+      <li>Wynwood Walls</li>
+    </ul>
+    <p>
+      A historical Italian estate first built in 1916 as a private winter
+      retreat for American Businessman James Deering, this beautiful villa pays
+      tribute to the Italian Renaissance era. On this site tourists can visit a
+      Museum that still has its earlier furnishings and artwork intact, as well
+      as its beautiful formal gardens. Many tourists say this is one of the best
+      bay views in Miami!
+   
+      Open to the public, and free of charge! Doesn’t get any better than that.
+      Wynwood Walls was first established and opened in 2009 by well-known art
+      visionary Tony Goldman. This outdoor museum features more than 40 street
+      art murals from some of the leading street artists around the world. If
+      you’re an up-and-coming artist looking for inspiration, this place is a
+      must see!  
+      <img src="images/wynwood-walls.jpg" alt="Miami Img" />
+    </p>
+  </body>
+  <footer>
+    <div> &copy; CodingOnTheFly 2020</div>
+  </footer>
+</html>
