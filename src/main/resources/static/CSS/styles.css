@@ -102,8 +102,7 @@ h3 {
     border-radius: 10px;
 }
 .comment-container{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 15px 40px 15px 40px;
     margin: 2em 10em 2em 10em;
     border-radius: 10px;
 }
