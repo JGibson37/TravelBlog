@@ -32,8 +32,12 @@ public class HashtagController {
 
     @PostMapping("hashtags/add")
     public String addHashtag(String hashtag, String cityName) {
-        Hashtag hashtagToAdd = new Hashtag(hashtag);
-        hashtagRepo.save(hashtagToAdd);
+        Hashtag hashtagToAdd = hashtagRepo.findHashtagByHashtag(hashtag) ;
+        if (hashtagToAdd == null) {
+            hashtagToAdd = new Hashtag(hashtag);
+            hashtagRepo.save(hashtagToAdd);
+        }
+
         City city = cityStorage.findCityByName(cityName);
         city.addHashtag(hashtagToAdd);
         cityStorage.save(city);
