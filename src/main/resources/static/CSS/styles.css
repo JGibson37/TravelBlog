@@ -18,7 +18,7 @@ body{
     color: white;
 }
 
-.weekly-container, .monthly-container, .review-container, .hashtag-city {
+.weekly-container, .monthly-container, .review-container, .hashtag-city,.comment-container {
     background-color: rgba(82, 105, 112, 0.473);
 }
 
@@ -99,5 +99,11 @@ h3 {
 }
 
 #submit {
+    border-radius: 10px;
+}
+.comment-container{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 2em 10em 2em 10em;
     border-radius: 10px;
 }

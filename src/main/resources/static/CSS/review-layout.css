@@ -59,3 +59,9 @@ img {
     margin-left: 40px;
 }
 
+.comment{
+    margin: 0;
+}
+.comment-container{
+    margin: 1em;
+}

@@ -29,8 +29,8 @@ public class CommentController {
     }
 
     @PostMapping("comments/add")
-    public String addComment(String comment, String cityName) {
-        Comment commentToAdd = new Comment(comment);
+    public String addComment(String comment, String comment1, String comment2, String cityName) {
+        Comment commentToAdd = new Comment(comment, comment1, comment2);
         commentRepo.save(commentToAdd);
         City city = cityStorage.findCityByName(cityName);
         city.addComment(commentToAdd);
@@ -40,6 +40,9 @@ public class CommentController {
     @GetMapping("comment/{id}")
     public String showSingleComment(@PathVariable Long id, Model model) {
         model.addAttribute("comment", commentRepo.findById(id).get());
+        model.addAttribute("comment1", commentRepo.findById(id).get());
+        model.addAttribute("comment2", commentRepo.findById(id).get());
+
         return "city-template";
     }
 }

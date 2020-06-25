@@ -66,12 +66,20 @@
     <input type="hidden" name="cityName" th:value="${city.cityName}"/>
     <button id="submit-button" type="submit">Submit</button>
 </form>
-<div th:each="navComment: ${city.comments}">
-    <p class="comment" th:text="${navComment.comment}"
+<div class="comment-container" th:each="navComment: ${city.comments}">
+    <p class="comment" th:text="'Posted On: ' + ${navComment.comment2}"
+       th:href="@{'/comment/' + ${navComment.comment2}}"></p>
+    <p class="comment" th:text="'By: ' + ${navComment.comment1}"
+       th:href="@{'/comment/' + ${navComment.comment1}}"></p>
+        <p class="comment" th:text="'Comment: ' + ${navComment.comment}"
        th:href="@{'/comment/' + ${navComment.comment}}"></p>
 </div>
 
 <form id="add-comment" action="/comments/add" method="POST">
+    <label>Your Name:</label>
+    <input type="text" name="comment1"/>
+    <label>Today's Date:</label>
+    <input type="text" name="comment2"/>
     <label>Insert new comment for this review:</label>
     <input type="text" name="comment"/>
     <input type="hidden" name="cityName" th:value="${city.cityName}"/>
