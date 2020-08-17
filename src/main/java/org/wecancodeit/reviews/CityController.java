@@ -27,8 +27,6 @@ public class CityController {
         model.addAttribute("city", cityStorage.findCityByName(name));
         model.addAttribute("hashtags",hashtagRepo.findAll());
         model.addAttribute("comments", commentRepo.findAll());
-
-
         return "cities-template";
     }
 

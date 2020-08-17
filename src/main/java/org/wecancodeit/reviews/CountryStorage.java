@@ -18,6 +18,7 @@ public class CountryStorage {
     public Country findHashtagByHashtag(String name) {
         return countryRepo.findCountryByName(name);
     }
+
     public void save(Country country) {
         countryRepo.save(country);
     }
