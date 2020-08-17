@@ -26,7 +26,7 @@ public class CountryController {
         model.addAttribute("countries", countryStorage.getCountries());
         return "country-template";
     }
-    @RequestMapping("homepage")
+    @RequestMapping("countries")
     public String showAllCountries(Model model){
         model.addAttribute("countries", countryStorage.getCountries());
         return "category-template";
